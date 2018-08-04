@@ -1,5 +1,5 @@
 # orangepi
-Air cooling Raspberry pi or Orange pi 
+<b>Air cooling Raspberry pi or Orange pi</b> 
 <br>Воздушное охлаждение Raspberry pi или Orange pi
 
 <br>cd ~
@@ -45,9 +45,7 @@ Air cooling Raspberry pi or Orange pi
 <br>chmod 774 /home/pi/gpio.sh
 
 <br>Добавляем в автозагрузку пользователь pi
-
 <br>sudo nano /etc/*rc.local
   <br>  /home/pi/gpio.sh
-    
-<br>имейте ввиду, что он должен быть добавлен до строки
+  <br>имейте ввиду, что он должен быть добавлен до строки
 <br>exit 0
