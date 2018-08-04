@@ -1,15 +1,16 @@
 # orangepi
-Air cooling Raspberry pi or Orange pi
-Воздушное охлаждение Raspberry pi или Orange pi
+Air cooling Raspberry pi or Orange pi 
+<br>Воздушное охлаждение Raspberry pi или Orange pi
 
-cd ~
-Создаем файл
-touch temp.sh
+<br>cd ~
+<br>Создаем файл<
+<br>touch temp.sh
 
-Добавляем в него код, уплавление через gpio 1
-nano temp.sh
+<br>Добавляем в него код, уплавление через gpio 1
 
-#!/bin/bash
+<br>nano temp.sh
+
+    #!/bin/bash
         temp="55" # Устанавливаем какую хотим поддерживать температуру
         while true; do
         realtemp=`cat /sys/class/thermal/thermal_zone0/temp`
@@ -25,14 +26,14 @@ nano temp.sh
         sleep 10 # Устанавливаем как часто будем снимать показания температуры
         done
         
-Даем права на выполнение 
-chmod 774 /home/pi/temp.sh
+<br>Даем права на выполнение 
+<br>chmod 774 /home/pi/temp.sh
 
-Создаем файл
-touch gpio.sh
+<br>Создаем файл
+<br>touch gpio.sh
 
-Добавляем в него код
-nano gpio.sh
+<br>Добавляем в него код
+<br>nano gpio.sh
 
         #!/bin/sh
         echo "1" > /sys/class/gpio/export
@@ -40,13 +41,13 @@ nano gpio.sh
         gpio mode 1 out
         /home/pi/temp.sh &
 
-Даем права на выполнение 
-chmod 774 /home/pi/gpio.sh
+<br>Даем права на выполнение 
+<br>chmod 774 /home/pi/gpio.sh
 
-Добавляем в автозагрузку пользователь pi
+<br>Добавляем в автозагрузку пользователь pi
 
-sudo nano /etc/*rc.local
-    /home/pi/gpio.sh
+<br>sudo nano /etc/*rc.local
+  <br>  /home/pi/gpio.sh
     
-имейте ввиду, что он должен быть добавлен до строки
-exit 0
+<br>имейте ввиду, что он должен быть добавлен до строки
+<br>exit 0
