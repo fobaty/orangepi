@@ -1,4 +1,3 @@
-# orangepi
 <b>Air cooling Raspberry pi or Orange pi</b> 
 <br>Воздушное охлаждение Raspberry pi или Orange pi
 
